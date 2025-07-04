@@ -2,6 +2,10 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY app.py .
+COPY . .
+
+RUN pip install flask
+
+EXPOSE 81
 
 CMD ["python", "app.py"]
